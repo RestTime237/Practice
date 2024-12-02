@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="slide.css">
+  <script src="https://kit.fontawesome.com/4e29a079f9.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <input type="radio" name="slider_selector" id="a" checked>
+  <input type="radio" name="slider_selector" id="b">
+  <input type="radio" name="slider_selector" id="c">
+  <input type="radio" name="slider_selector" id="d">
+
+  <div class="screen">
+    <ul>
+      <li>
+        
+        <div class="no1"><label for="d" name="left1"><i class="fa-solid fa-angle-left"></i></label>
+          <label for="b" name="right1"><i class="fa-solid fa-angle-right"></i></label>1</div>
+      </li>
+      <li>
+        
+        <div class="no2"><label for="a" name="left2"><i class="fa-solid fa-angle-left"></i></label>
+          <label for="c" name="right2"><i class="fa-solid fa-angle-right"></i></label>2</div>
+      </li>
+      <li>
+        
+        <div class="no3"><label for="b" name="left3"><i class="fa-solid fa-angle-left"></i></label>
+          <label for="d" name="right3"><i class="fa-solid fa-angle-right"></i></label>3</div>
+      </li>
+      <li>
+        
+        <div class="no4"><label for="c" name="left4"><i class="fa-solid fa-angle-left"></i></label>
+          <label for="a" name="right4"><i class="fa-solid fa-angle-right"></i></label>4</div>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  transition: all 1s;
+}
+
+.screen {
+  width: 1200px;
+  height: 800px;
+  border: 3px solid black;
+  margin: 10px;
+  align-items: center;
+  margin: auto;
+  overflow: hidden;
+}
+
+.screen ul {
+  display: flex;
+}
+.no1 {
+  width: 1200px;
+  height: 800px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 800px;
+  background-color: lightyellow;
+  position: relative;
+}
+
+.no2 {
+  width: 1200px;
+  height: 800px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 800px;
+  background-color: lightblue;
+  position: relative;
+}
+
+.no3 {
+  width: 1200px;
+  height: 800px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 800px;
+  background-color: lightgreen;
+  position: relative;
+}
+
+.no4 {
+  width: 1200px;
+  height: 800px;
+  font-size: 50px;
+  text-align: center;
+  line-height: 800px;
+  background-color: lightpink;
+  position: relative;
+}
+
+label[name="left1"] {
+  width: 120px;
+  height: 800px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+label[name=right1] {
+  width: 120px;
+  height: 800px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+label[name="left2"] {
+  width: 120px;
+  height: 800px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+label[name=right2] {
+  width: 120px;
+  height: 800px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+label[name="left3"] {
+  width: 120px;
+  height: 800px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+label[name=right3] {
+  width: 120px;
+  height: 800px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+label[name="left4"] {
+  width: 120px;
+  height: 800px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+label[name=right4] {
+  width: 120px;
+  height: 800px;
+  /* background-color: red; */
+  position: absolute;
+  top: 0;
+  right: 0px;
+}
+
+#a:checked ~ .screen li {
+  transform: translateX(0%);
+}
+
+#b:checked ~ .screen li {
+  transform: translateX(-100%);
+}
+
+#c:checked ~ .screen li {
+  transform: translateX(-200%);
+}
+
+#d:checked ~ .screen li {
+  transform: translateX(-300%);
+}
+
+input {
+  display: none;
+}
